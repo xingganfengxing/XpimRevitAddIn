@@ -1,0 +1,4 @@
+F:\Code\HcyzBimAddIn\HcyzBimAddIn\obj\x86\Debug\HcyzBimAddIn.csprojAssemblyReference.cache
+F:\Code\HcyzBimAddIn\HcyzBimAddIn\obj\x86\Debug\HcyzBimAddIn.UI.FormModelToGltf.resources
+F:\Code\HcyzBimAddIn\HcyzBimAddIn\obj\x86\Debug\HcyzBimAddIn.UI.FormConvertStatus.resources
+F:\Code\HcyzBimAddIn\HcyzBimAddIn\obj\x86\Debug\HcyzBimAddIn.csproj.GenerateResource.cache

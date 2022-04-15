@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF450C01-26BC-4101-BCF3-72331477B742}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XpimRevitAddIn</RootNamespace>
+    <AssemblyName>XpimRevitAddIn</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.7.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.NETStandard.1.0.7\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RevitAPI, Version=19.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit.RevitApi.x64.2019.0.0\lib\net45\RevitAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI, Version=19.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit.RevitApiUI.x64.2019.0.0\lib\net45\RevitAPIUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\IndexedDictionary.cs" />
+    <Compile Include="Common\PointMeterDouble.cs" />
+    <Compile Include="Common\VertexLookupMeterDouble.cs" />
+    <Compile Include="RvtToXpimCommand.cs" />
+    <Compile Include="Common\CommonFunction.cs" />
+    <Compile Include="Export\Converter\IContainer.cs" />
+    <Compile Include="Export\Converter\IConverter.cs" />
+    <Compile Include="Export\Converter\Json3DConverter.cs" />
+    <Compile Include="Export\D3d\ComponentType.cs" />
+    <Compile Include="Export\D3d\D3d.cs" />
+    <Compile Include="Export\D3d\D3dAccessor.cs" />
+    <Compile Include="Export\D3d\D3dAttribute.cs" />
+    <Compile Include="Export\D3d\D3dBinaryBufferContents.cs" />
+    <Compile Include="Export\D3d\D3dBinaryData.cs" />
+    <Compile Include="Export\D3d\D3dBuffer.cs" />
+    <Compile Include="Export\D3d\D3dBufferView.cs" />
+    <Compile Include="Export\D3d\D3dContainer.cs" />
+    <Compile Include="Export\D3d\D3dExportConfigs.cs" />
+    <Compile Include="Export\D3d\D3dExportContext.cs" />
+    <Compile Include="Export\D3d\D3dExportManager.cs" />
+    <Compile Include="Export\D3d\D3dExportManagerUtils.cs" />
+    <Compile Include="Export\D3d\D3dExportNode.cs" />
+    <Compile Include="Export\D3d\D3dExtras.cs" />
+    <Compile Include="Export\D3d\D3dMaterial.cs" />
+    <Compile Include="Export\D3d\D3dMesh.cs" />
+    <Compile Include="Export\D3d\D3dMeshPrimitive.cs" />
+    <Compile Include="Export\D3d\D3dNode.cs" />
+    <Compile Include="Export\D3d\D3dPBR.cs" />
+    <Compile Include="Export\D3d\d3dScene.cs" />
+    <Compile Include="Export\D3d\d3dVersion.cs" />
+    <Compile Include="Export\D3d\GridParameters.cs" />
+    <Compile Include="Export\D3d\HashedType.cs" />
+    <Compile Include="Export\D3d\MeshContainer.cs" />
+    <Compile Include="Export\D3d\Targets.cs" />
+    <Compile Include="Export\Json3D\ComponentType.cs" />
+    <Compile Include="Export\Json3D\GridParameters.cs" />
+    <Compile Include="Export\Json3D\HashedType.cs" />
+    <Compile Include="Export\Json3D\MeshContainer.cs" />
+    <Compile Include="Export\Json3D\Targets.cs" />
+    <Compile Include="Export\Json3D\Json3D.cs" />
+    <Compile Include="Export\Json3D\Json3DAccessor.cs" />
+    <Compile Include="Export\Json3D\Json3DAttribute.cs" />
+    <Compile Include="Export\Json3D\Json3DBinaryBufferContents.cs" />
+    <Compile Include="Export\Json3D\Json3DBinaryData.cs" />
+    <Compile Include="Export\Json3D\Json3DBuffer.cs" />
+    <Compile Include="Export\Json3D\Json3DBufferView.cs" />
+    <Compile Include="Export\Json3D\Json3DContainer.cs" />
+    <Compile Include="Export\Json3D\Json3DExportConfigs.cs" />
+    <Compile Include="Export\Json3D\Json3DExportContext.cs" />
+    <Compile Include="Export\Json3D\Json3DExportManager.cs" />
+    <Compile Include="Export\Json3D\Json3DExportManagerUtils.cs" />
+    <Compile Include="Export\Json3D\Json3DExportNode.cs" />
+    <Compile Include="Export\Json3D\Json3DExtras.cs" />
+    <Compile Include="Export\Json3D\Json3DMaterial.cs" />
+    <Compile Include="Export\Json3D\Json3DMesh.cs" />
+    <Compile Include="Export\Json3D\Json3DMeshPrimitive.cs" />
+    <Compile Include="Export\Json3D\Json3DNode.cs" />
+    <Compile Include="Export\Json3D\Json3DPBR.cs" />
+    <Compile Include="Export\Json3D\Json3DScene.cs" />
+    <Compile Include="Export\Json3D\Json3DVersion.cs" />
+    <Compile Include="Common\MinMaxXYZ.cs" />
+    <Compile Include="Common\ExportElementJson.cs" />
+    <Compile Include="Common\ExportModelTreeJson.cs" />
+    <Compile Include="Common\CommonExportContent.cs" />
+    <Compile Include="Common\FileHelper.cs" />
+    <Compile Include="Common\GeometryData.cs" />
+    <Compile Include="XpimExporterApp.cs" />
+    <Compile Include="Export\Xpim\XpimProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\SysConfig.cs" />
+    <Compile Include="Common\SystemParameterType.cs" />
+    <Compile Include="Revit2Pim\FamilyItem.cs" />
+    <Compile Include="Revit2Pim\FamilyPropertyItem.cs" />
+    <Compile Include="Revit2Pim\FamilySymbolItem.cs" />
+    <Compile Include="Revit2Pim\RevitPimMap.cs" />
+    <Compile Include="UI\Base\IExportUserConfig.cs" />
+    <Compile Include="UI\Xjson3D\FormModelToXjson3DFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Xjson3D\FormModelToXjson3DFile.Designer.cs">
+      <DependentUpon>FormModelToXjson3DFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Base\ExecuteEventHandler.cs" />
+    <Compile Include="UI\Base\WindowWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\toXpimFile_32x32.png" />
+    <Content Include="Files\setting.xml" />
+    <Content Include="Files\XpimRevitAddIn.addin">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Files\revitPimMap.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Xjson3D\FormModelToXjson3DFile.resx">
+      <DependentUpon>FormModelToXjson3DFile.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+  </Target>
+</Project>

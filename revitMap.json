@@ -1,0 +1,42 @@
+{
+  "name": "测试Revit映射",
+  "families": [
+    {
+      "revitCategoryName": "门",
+      "revitFamilyName": "单扇 - 与墙齐",
+      "pimTypeName": "门",
+      "pimTypeCode": "0210",
+      "properties": []
+    },
+    {
+      "revitCategoryName": "窗",
+      "revitFamilyName": "双扇平开 - 带贴面",
+      "pimTypeName": "窗",
+      "pimTypeCode": "0220",
+      "properties": []
+    },
+    {
+      "revitCategoryName": "墙",
+      "revitFamilyName": "基本墙",
+      "pimTypeName": "墙",
+      "pimTypeCode": "0110",
+      "properties": []
+    }
+  ],
+  "familySymbols": [
+    {
+      "pimCom3dCode": "951010-02",
+      "pimCom3dName": "大齿白杨 - 7.6 米",
+      "revitCategoryName": "植物",
+      "revitFamilyName": "RPC 树 - 落叶树",
+      "revitFamilySymbolName": "大齿白杨 - 7.6 米"
+    },
+    {
+      "revitCategoryName": "植物",
+      "revitFamilyName": "RPC 树 - 落叶树",
+      "revitFamilySymbolName": "山楂 - 7.4 米",
+      "pimCom3dName": "山楂 - 7.4 米",
+      "pimCom3dCode": "951010-01"
+    }
+  ]
+}

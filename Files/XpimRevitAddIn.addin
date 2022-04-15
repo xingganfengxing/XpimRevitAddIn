@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>XpimRevitAddIn</Name> 
+    <Assembly>F:\Code\XpimRevitAddIn\XpimRevitAddIn\bin\Debug\XpimRevitAddIn.dll</Assembly>
+    <ClientId>8ffa1ee1-4de3-440b-aa45-b1de688c75b3</ClientId>
+    <FullClassName>XpimRevitAddIn.XpimExporterApp</FullClassName>
+    <VendorId>XPIM Exporter</VendorId>
+    <VendorDescription>XPIM Exporter</VendorDescription>
+  </AddIn>
+</RevitAddIns>

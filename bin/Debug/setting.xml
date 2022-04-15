@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <Revit> 
+    <Lods> 
+      <Lod key="LOD300" value="6" />
+    	<!--
+      <Lod key="LOD100" value="0" />
+      <Lod key="LOD200" value="3" />
+      <Lod key="LOD300" value="6" />
+      <Lod key="LOD400" value="8" /> 
+      <Lod key="LOD500" value="10" />
+      -->
+    </Lods>
+  </Revit>
+</Configuration>
